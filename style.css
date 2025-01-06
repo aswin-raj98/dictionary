@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(assets/dic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.form-ctn {
+    background: #9c967e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-ctn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #645b5bbd;
+    box-shadow: 0 0 5px rgba(54, 55, 58, 0.8);
+}
+
+button {
+    padding: 10px 20px;
+    background: #292917;
+    color: lightblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: lightblue;
+    color: #292917;
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.content:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.wordname {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+}
+.phonetics{
+    font-size: 1.5em;
+    color: #111;
+}
+.pos, .meaning, .example {
+    font-size: 1.2em;
+    color: #222;
+}
+.pos2, .meaning2, .example2{
+    font-size: 1.2em;
+    color: #555;
+}
+.footer {
+    width: 100%;
+    background-color: #2929179c; 
+    color: #add8e6b6; 
+    text-align: center;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .form-ctn, .content {
+        width: 90%;
+    }
+
+    input {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    .wordname {
+        font-size: 1.8em;
+    }
+
+    .pos, .phonetics, .meaning, .example, .pos2, .meaning2,.example2{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .wordname {
+        font-size: 1.5em;
+    }
+
+    .pos, .phonetics, .meaning, .example, .pos2, .meaning2,.example2 {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/dictionary.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="form-ctn">
+        <form id="wordSearch">
+         <label for="input">Enter Any Word to Search</label><br>
+         <input type="text" id="input" placeholder="Search for a word..." required><br>
+         <button type="button" id="searchBtn">Search</button>
+        </form>
+    </div>
+    <div class="content">
+        <h1 class="wordname" id="wordname"></h1>
+        <h3 class="phonetics" id="phonetics"></h3>
+        <h2 class="pos" id="pos"></h2>
+        <h2 class="meaning" id="meaning"></h2>   
+        <h3 class="example" id="example"></h3>
+        <h2 class="pos2" id="pos2"></h2>
+        <h2 class="meaning2" id="meaning2"></h2>
+        <h3 class="example2" id="example2"></h3>
+    </div>
+    <footer class="footer">
+        <p>&copy; Aswin Raj P. 2025 Dictionary App. All rights reserved.</p>
+        <a href="mailto:aswinnov@gmail.com"><i class="fa-solid fa-envelope" style="color: #add8e6;"></i></a>
+        <a href="tel:+918438765987"><i class="fa-solid fa-phone" style="color: #add8e6;"></i></a>
+    </footer>    
+    <script src="dic.js"></script>
+</body>
+</html>
