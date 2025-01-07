@@ -17,7 +17,8 @@ searchBtn.addEventListener("click",function(){
     fetch(dicLink)
      .then(response => response.json())
      .then(data =>{
-        wordname.innerHTML = `Word: ${data[0].word}`;
+      try {
+         wordname.innerHTML = `Word: ${data[0].word}`;
         phonetics.innerHTML = `Phonetic: ${data[0].phonetic}`;
         pos.innerHTML = `Parts of Speech: ${data[0].meanings[0].partOfSpeech}`;
         meaning.innerHTML = `Meaning: ${data[0].meanings[0].definitions[0].definition}`;
@@ -25,7 +26,12 @@ searchBtn.addEventListener("click",function(){
         pos2.innerHTML = `Parts of Speech: ${data[0].meanings[1].partOfSpeech}`;
         meaning2.innerHTML = `Meaning: ${data[0].meanings[1].definitions[0].definition}`;
         example2.innerHTML = `Example: ${data[0].meanings[1].definitions[0].example}`;
-     })
+     
+      } catch (error) {
+         console.log(error);
+         return `${wordName} not found in directory`;
+      }
+   })
 })
 document.getElementById("wordSearch").addEventListener("keydown", function (event) {
    if (event.key === "Enter") {
